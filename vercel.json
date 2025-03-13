@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "routes": [
+    { "src": "/proxy/(.*)", "dest": "/api" },
+    { "src": "/xml/(.*)", "dest": "/api" },
+    { "src": "/clean-task", "dest": "/api" }
+  ],
+  "builds": [
+    { "src": "api/*.js", "use": "@vercel/node" }
+  ],
+  "env": {
+    "NODE_ENV": "production"
+  }
+}
